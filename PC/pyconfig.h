@@ -1,13 +1,13 @@
 #ifndef Py_CONFIG_H
 #define Py_CONFIG_H
 
-#ifndef Py_NO_ENABLE_SHARED
-#define Py_NO_ENABLE_SHARED
-#endif
+//#ifndef Py_NO_ENABLE_SHARED
+//#define Py_NO_ENABLE_SHARED
+//#endif
 
-#ifndef MS_NO_COREDLL
-#define MS_NO_COREDLL
-#endif
+//#ifndef MS_NO_COREDLL
+//#define MS_NO_COREDLL
+//#endif
 
 /* pyconfig.h.  NOT Generated automatically by configure.
 
