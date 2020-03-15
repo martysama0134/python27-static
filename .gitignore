@@ -10,6 +10,7 @@ externals/
 *.pyc
 *.pyo
 *.exp
+*.dll
 
 *.user
 
