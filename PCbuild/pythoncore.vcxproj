@@ -232,6 +232,7 @@
     <ClInclude Include="..\Python\thread_nt.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\Modules\getbuildinfo.c" />
     <ClCompile Include="..\Modules\_bisectmodule.c" />
     <ClCompile Include="..\Modules\_codecsmodule.c" />
     <ClCompile Include="..\Modules\_collectionsmodule.c" />
