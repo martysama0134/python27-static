@@ -563,7 +563,7 @@ typedef struct {
     char osfile;
 } my_ioinfo;
 
-extern __declspec(dllimport) char * __pioinfo[];
+// extern __declspec(dllimport) char * __pioinfo[];
 #define IOINFO_L2E 5
 #define IOINFO_ARRAY_ELTS   (1 << IOINFO_L2E)
 #define IOINFO_ARRAYS 64
@@ -583,9 +583,9 @@ _PyVerify_fd(int fd)
     /* Determine the actual size of the ioinfo structure,
      * as used by the CRT loaded in memory
      */
-    if (sizeof_ioinfo == 0 && __pioinfo[0] != NULL) {
-        sizeof_ioinfo = _msize(__pioinfo[0]) / IOINFO_ARRAY_ELTS;
-    }
+    // if (sizeof_ioinfo == 0 && __pioinfo[0] != NULL) {
+        // sizeof_ioinfo = _msize(__pioinfo[0]) / IOINFO_ARRAY_ELTS;
+    // }
     if (sizeof_ioinfo == 0) {
         /* This should not happen... */
         goto fail;
@@ -596,13 +596,13 @@ _PyVerify_fd(int fd)
         /* Microsoft CRT would check that 0<=fd<_nhandle but we can't do that.  Instead
          * we check pointer validity and other info
          */
-        if (0 <= i1 && i1 < IOINFO_ARRAYS && __pioinfo[i1] != NULL) {
+        // if (0 <= i1 && i1 < IOINFO_ARRAYS && __pioinfo[i1] != NULL) {
             /* finally, check that the file is open */
-            my_ioinfo* info = (my_ioinfo*)(__pioinfo[i1] + i2 * sizeof_ioinfo);
-            if (info->osfile & FOPEN) {
-                return 1;
-            }
-        }
+            // my_ioinfo* info = (my_ioinfo*)(__pioinfo[i1] + i2 * sizeof_ioinfo);
+            // if (info->osfile & FOPEN) {
+                // return 1;
+            // }
+        // }
     }
   fail:
     errno = EBADF;
