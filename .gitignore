@@ -11,7 +11,8 @@ externals/
 *.pyo
 *.exp
 *.dll
-
+*.pdb
+*.suo
 *.user
 
 pythonnt_rc.h
