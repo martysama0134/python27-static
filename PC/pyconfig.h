@@ -342,6 +342,12 @@ Py_NO_ENABLE_SHARED to find out.  Also support MS_NO_COREDLL for b/w compat */
 #				pragma comment(lib,"python27.lib")
 #			endif /* _DEBUG */
 #		endif /* _MSC_VER */
+#else
+#	ifdef _DEBUG
+#		pragma comment(lib,"python27_d-static.lib")
+#	else
+#		pragma comment(lib,"python27-static.lib")
+#	endif /* _DEBUG */
 #	endif /* Py_BUILD_CORE */
 #endif /* MS_COREDLL */
 
